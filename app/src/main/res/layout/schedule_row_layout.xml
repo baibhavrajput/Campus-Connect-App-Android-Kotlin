@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/materialCardView2"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="28dp"
+    app:cardElevation="5dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabSchedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:src="@drawable/ic_schee"
+                android:tint="@color/light_blue_600"
+                android:backgroundTint="@color/p_blue_light"
+                app:borderWidth="0dp"
+                app:elevation="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/timechip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/product_sans_regular"
+                android:text="09:50 AM"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/fabSchedule"
+                app:layout_constraintTop_toBottomOf="@+id/txtWVenue" />
+
+
+            <TextView
+                android:id="@+id/txtWSubject"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/product_sans_regular"
+                android:maxLines="1"
+                android:text="AUTOMATION"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/fabSchedule"
+                app:layout_constraintTop_toTopOf="@+id/fabSchedule" />
+
+            <ImageView
+                android:id="@+id/imgWFaculty"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/txtWSubject"
+                app:layout_constraintTop_toBottomOf="@+id/txtWSubject"
+                app:srcCompat="@drawable/ic_faculty"
+                app:tint="#666565" />
+
+            <TextView
+                android:id="@+id/txtWFaculty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/product_sans_regular"
+                android:text="Prachi Dhankar"
+                android:textColor="@color/text_grey"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgWFaculty"
+                app:layout_constraintStart_toEndOf="@+id/imgWFaculty"
+                app:layout_constraintTop_toTopOf="@+id/imgWFaculty" />
+
+            <ImageView
+                android:id="@+id/imgRoomNO"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/imgWFaculty"
+                app:layout_constraintTop_toBottomOf="@+id/imgWFaculty"
+                app:srcCompat="@drawable/ic_venue"
+                app:tint="#666565" />
+
+            <TextView
+                android:id="@+id/txtWVenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/product_sans_regular"
+                android:text="Room 216, Cse"
+                android:textColor="@color/text_grey"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgRoomNO"
+                app:layout_constraintStart_toEndOf="@+id/imgRoomNO"
+                app:layout_constraintTop_toTopOf="@+id/imgRoomNO" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipLectureType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="4dp"
+                android:text="Weekly Report"
+                app:chipBackgroundColor="@color/p_blue_light"
+                app:chipIcon="@drawable/ic_baseline_videocam_24"
+                app:chipStartPadding="10dp"
+                app:chipIconTint="@color/light_blue_600"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">CampusHub</string>
+    <string name="menu_home">Home</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="cse">CSE</string>
+    <string name="mechanical">Mechanical</string>
+    <string name="civil">Civil</string>
+    <string name="electronics">Electronics</string>
+    <string name="electrical">Electrical</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+
+
+    <string-array name="branch">
+        <item>CSE</item>
+        <item>Mechanical</item>
+        <item>Electrical</item>
+        <item>Electronics</item>
+        <item>Civil</item>
+    </string-array>
+
+    <string-array name="semester">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <string name="backbutton">BackButton</string>
+    <string name="version_1_0_0">Version 1.0.0</string>
+    <string name="campushub_desc">CampusHub is a Android application built to help college student to help in monitoring his attendance and help to manage his Schedule. It also help in accessing all study material at one place. Student gets notifications regarding all important notices, events, etc.</string>
+    <string name="quot_start_succeding_stop_seeking_quot">Start Learning Stop Seeking</string>
+    <string name="developed_by">Developed by</string>
+    <string name="android_developer">Android Developer</string>
+    <string name="we_will_hear_your_feedback_and_suggestions_and_try_to_add_new_features_based_on_your_request_thanks_for_using_stumate">We will hear your Feedback and Suggestions and try to add new features based on your request. Thanks for using CampusHub!</string>
+    <string name="knvrssaikiran_gmail_com">knishant362@gmail.com</string>
+    <string name="please_give_your_valuable_feedback">Please give your valuable Feedback</string>
+    <string name="submit_feedback">Submit Feedback</string>
+    <string name="about_us">About Us</string>
+
+</resources>

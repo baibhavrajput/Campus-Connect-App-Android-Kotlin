@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.user.login.LoginFragment">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.06"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_login_doodle"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#0003DAC5"
+            app:cardElevation="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_marginTop="60dp"
+                            android:src="@drawable/ic_person_book"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/etEmail"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="16dp"
+                            android:background="@color/white"
+                            android:hint="Email address"
+                            app:boxCornerRadiusBottomEnd="30dp"
+                            app:boxCornerRadiusBottomStart="30dp"
+                            app:boxCornerRadiusTopEnd="30dp"
+                            app:boxCornerRadiusTopStart="30dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtS"
+                            app:startIconDrawable="@drawable/ic_person"
+                            app:startIconTint="@color/light_blue_600">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textEmailAddress"
+                                    android:lines="1"
+                                    android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/etPasswordd"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:background="@color/white"
+                            android:hint="Password"
+                            app:boxCornerRadiusBottomEnd="30dp"
+                            app:boxCornerRadiusBottomStart="30dp"
+                            app:boxCornerRadiusTopEnd="30dp"
+                            app:boxCornerRadiusTopStart="30dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/etEmail"
+                            app:startIconDrawable="@drawable/ic_baseline_lock_24"
+                            app:startIconTint="@color/light_blue_600">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textPassword"
+                                    android:lines="1"
+                                    android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        z<cn.xm.weidongjian.progressbuttonlib.ProgressButton
+                            android:id="@+id/btnLogin"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="16dp"
+                            android:backgroundTint="@color/light_blue_600"
+                            android:fontFamily="@font/product_sans_regular"
+                            android:text="Login"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="@drawable/rounded_button"
+                            android:padding="14dp"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtForgotPassword" />
+
+
+
+                        <TextView
+                            android:id="@+id/justTExt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="24dp"
+                            android:fontFamily="@font/product_sans_regular"
+                            android:text="Dont have an account?"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.4"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/btnGoToSignup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/product_sans_regular"
+                            android:text=" Sign Up"
+                            android:textColor="@color/light_blue_600"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/justTExt"
+                            app:layout_constraintStart_toEndOf="@+id/justTExt"
+                            app:layout_constraintTop_toTopOf="@+id/justTExt" />
+
+
+                        <TextView
+                            android:id="@+id/txtLog"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:fontFamily="@font/product_sans_regular"
+                            android:text="Welcome to CampuHub"
+                            android:textColor="#F5000000"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+                        <TextView
+                            android:id="@+id/txtS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/product_sans_regular"
+                            android:text="Log in your account to continue"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="@+id/txtLog"
+                            app:layout_constraintStart_toStartOf="@+id/txtLog"
+                            app:layout_constraintTop_toBottomOf="@+id/txtLog" />
+
+
+                        <TextView
+                            android:id="@+id/txtForgotPassword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="20dp"
+                            android:fontFamily="@font/product_sans_regular"
+                            android:text="Forgot Password?"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/etPasswordd" />
+
+
+                        <ImageView
+                            android:id="@+id/btnfacultyLogin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:src="@drawable/ic_faculty"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/light_blue_600" />
+
+                        <Button
+                            android:id="@+id/btnFacultyLogin_LoginFrag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Faculty Login"
+                            app:layout_constraintBottom_toTopOf="@+id/justTExt"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

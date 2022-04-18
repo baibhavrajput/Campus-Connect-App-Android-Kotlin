@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_nav"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.trendster.campus.ui.fragment.user.login.LoginFragment"
+        android:label="login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment"/>
+<!--            app:enterAnim="@anim/fragment_fade_enter"-->
+<!--            app:exitAnim="@anim/fragment_fade_exit" />-->
+        <action
+            android:id="@+id/action_loginFragment_to_forgotFragment"
+            app:destination="@id/forgotFragment"/>
+<!--            app:enterAnim="@anim/fragment_fade_enter"-->
+<!--            app:exitAnim="@anim/fragment_fade_exit" />-->
+        <action
+            android:id="@+id/action_loginFragment_to_facultyLoginFragment"
+            app:destination="@id/facultyLoginFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.trendster.campus.ui.fragment.user.signup.SignupFragment"
+        android:label="Signup"
+        tools:layout="@layout/fragment_signup" />
+    <fragment
+        android:id="@+id/forgotFragment"
+        android:name="com.trendster.campus.ui.fragment.user.forgot.ForgotFragment"
+        android:label="fragment_forgot"
+        tools:layout="@layout/fragment_forgot" >
+        <action
+            android:id="@+id/action_forgotFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_forgotFragment_to_facultyLoginFragment"
+            app:destination="@id/facultyLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/facultyLoginFragment"
+        android:name="com.trendster.campus.ui.fragment.user.faculty.FacultyLoginFragment"
+        android:label="FacultyLoginFragment"
+        tools:layout="@layout/fragment_faculty_login">
+        <action
+            android:id="@+id/action_facultyLoginFragment_to_facultySignupFragment"
+            app:destination="@id/facultySignupFragment" />
+        <action
+            android:id="@+id/action_facultyLoginFragment_to_forgotFragment"
+            app:destination="@id/forgotFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/facultySignupFragment"
+        android:name="com.trendster.campus.ui.fragment.user.faculty.FacultySignupFragment"
+        android:label="fragment_faculty_signup"
+        tools:layout="@layout/fragment_faculty_signup" >
+        <action
+            android:id="@+id/action_facultySignupFragment_to_facultyLoginFragment"
+            app:destination="@id/facultyLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.trendster.campus.ui.fragment.user.welcome.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"/>
+<!--            app:enterAnim="@anim/fragment_fade_enter"-->
+<!--            app:exitAnim="@anim/fragment_fade_exit" />-->
+        <action
+            android:id="@+id/action_welcomeFragment_to_signupFragment"
+            app:destination="@id/signupFragment"/>
+<!--            app:enterAnim="@anim/fragment_fade_enter"-->
+<!--            app:exitAnim="@anim/fragment_fade_exit" />-->
+    </fragment>
+
+</navigation>

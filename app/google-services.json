@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1079974662475",
+    "project_id": "campus-connect-official",
+    "storage_bucket": "campus-connect-official.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079974662475:android:8277110783742b0d8998ce",
+        "android_client_info": {
+          "package_name": "com.trendster.campus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1079974662475-dt2iracgojalmmp3sktqgnv5gojr6qa5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.freakDevs.campusConnect",
+            "certificate_hash": "b7d998f59f2ea78928c854c81b0861229968c825"
+          }
+        },
+        {
+          "client_id": "1079974662475-o0cefaf1n57ieisvrdae8s6ur691e1qm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdPiR92K3MVAlhXGdtr_LP9s4PfLb3PAQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1079974662475-o0cefaf1n57ieisvrdae8s6ur691e1qm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
