@@ -18,17 +18,21 @@ class OnboardingActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.hide()
 
+        /** List of Introduction Fragments */
         val fragmentList = arrayListOf<Fragment>(
             FirstFragment(),
             SecondFragment(),
             ThirdFragment()
         )
 
+        /** Initializing view pager adapter */
         val mAdapter = ViewPagerAdapter(
             fragmentList,
             supportFragmentManager,
             lifecycle
         )
+
+        /** binding ViewPager with onBoarding ViewPager */
         binding.onboardingViewPager.adapter = mAdapter
     }
 }

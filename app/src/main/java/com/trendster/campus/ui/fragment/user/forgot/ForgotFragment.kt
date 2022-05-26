@@ -31,6 +31,7 @@ class ForgotFragment : Fragment() {
         etEmail = binding.etForgotEmail
         btnForgot = binding.btnForgotPass
 
+        /** Calling forget password function on clicking send instructions button */
         btnForgot.setOnClickListener {
             forgotPassword()
         }
@@ -38,6 +39,7 @@ class ForgotFragment : Fragment() {
         return binding.root
     }
 
+    /** Function to send instruction for new password when send instructions is clicked */
     private fun forgotPassword() {
         when {
             etEmail.text.isEmpty() -> {
@@ -49,17 +51,23 @@ class ForgotFragment : Fragment() {
                 return
             }
             else -> {
+
+
                 auth.sendPasswordResetEmail(etEmail.text.toString())
+
+                    /** On successful sending of instructions, show success message and go back */
                     .addOnSuccessListener {
                         Toast.makeText(
                             requireContext(),
                             "Instructions has been sent to entered Email",
-                            Toast.LENGTH_LONG
-                        )
-                            .show()
+                            Toast.LENGTH_LONG).show()
+
 //                        findNavController().navigate(R.id.action_forgotFragment_to_loginFragment)
                         findNavController().navigateUp()
-                    }.addOnFailureListener { info ->
+                    }
+
+                    /** On failure of sending instructions , show error message */
+                    .addOnFailureListener { info ->
                         Toast.makeText(
                             requireContext(),
                             info.message,

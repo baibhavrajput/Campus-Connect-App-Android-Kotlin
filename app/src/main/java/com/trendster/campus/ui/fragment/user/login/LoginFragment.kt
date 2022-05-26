@@ -44,16 +44,25 @@ class LoginFragment : Fragment() {
         btnSignup = binding.btnGoToSignup
         txtForgotPass = binding.txtForgotPassword
 
+        /** calling login function to login an existing user */
         login()
+
+        /** If don't have an account, then take back to signup fragment */
         btnSignup.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_signupFragment)
         }
+
+        /** If forgot password, then take to forgot password fragment */
         txtForgotPass.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_forgotFragment)
         }
+
+        /** If faculty, then take to faculty login fragment */
         binding.btnfacultyLogin.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_facultyLoginFragment)
         }
+
+        /** If faculty, then take to faculty login fragment */
         binding.btnFacultyLoginLoginFrag.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_facultyLoginFragment)
         }
@@ -61,6 +70,7 @@ class LoginFragment : Fragment() {
         return binding.root
     }
 
+    /** Function to login an existing user by matching its details from firebase */
     private fun login() {
         btnLogin.setOnClickListener {
             when {
@@ -75,14 +85,20 @@ class LoginFragment : Fragment() {
                 }
                 else -> {
                     btnLogin.startRotate()
+
+                    /** Login user using Firebase */
                     auth.signInWithEmailAndPassword(etEmail.editText?.text.toString(), etPassword.editText?.text.toString())
                         .addOnCompleteListener(requireActivity()) { task ->
+
+                            /** If login is successful */
                             if (task.isSuccessful) {
                                 // Sign in success, update UI with the signed-in user's information
                                 Log.d("LoginSign", "signInWithEmail:success")
                                 val user = auth.currentUser
                                 updateUI(user)
-                            } else {
+                            }
+
+                            else {
                                 // If sign in fails, display a message to the user.
                                 Log.w("LoginSign", "signInWithEmail:failure", task.exception)
                                 updateUI(null)
@@ -93,12 +109,14 @@ class LoginFragment : Fragment() {
         }
     }
 
+    /** function to start Main activity if login is successful else give error message */
     private fun updateUI(user: FirebaseUser?) {
         if (user != null) {
             btnLogin.animFinish()
             startActivity(Intent(requireContext(), MainActivity::class.java))
             requireActivity().finish()
-        } else {
+        }
+        else {
             Toast.makeText(
                 requireContext(), "Authentication failed.",
                 Toast.LENGTH_SHORT

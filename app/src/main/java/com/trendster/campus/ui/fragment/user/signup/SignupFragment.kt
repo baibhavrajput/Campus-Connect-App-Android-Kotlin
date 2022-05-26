@@ -56,13 +56,18 @@ class SignupFragment : Fragment() {
         etPassword = binding.etPassword
         btnSignup = binding.btnSignup
 
+        /** setting up adapter to autocomplete branch and semester */
         setupAdapter()
 
+        /** Calling Sign Up function to add new user */
         signUp()
 
+        /** Back button click takes back to previous fragment */
         binding.btnBackSignup.setOnClickListener {
             findNavController().navigateUp()
         }
+
+        /** If already have account then take back to login fragment */
         binding.btnGoToLoginHere.setOnClickListener {
             findNavController().navigateUp()
         }
@@ -70,6 +75,7 @@ class SignupFragment : Fragment() {
         return binding.root
     }
 
+    /** Function to signup new user and store its details to firebase */
     private fun signUp() {
         btnSignup.setOnClickListener {
             when {
@@ -103,14 +109,20 @@ class SignupFragment : Fragment() {
                     branch = etBranch.editText?.text.toString()
                     semester = etSemester.editText?.text.toString()
 
-                    auth.createUserWithEmailAndPassword(etEmail.editText?.text.toString(), etPassword.editText?.text.toString())
+                    /** Adding user data to Firebase */
+                    auth.createUserWithEmailAndPassword(etEmail.editText?.text.toString() , etPassword.editText?.text.toString())
                         .addOnCompleteListener(requireActivity()) { task ->
+
+                            /** If adding data to firebase and Sign Up is successful , update UI by adding data to userViewModel */
                             if (task.isSuccessful) {
                                 // Sign in success, update UI with the signed-in user's information
                                 Log.d("SIGNUP", "createUserWithEmail:success")
                                 val user = auth.currentUser
                                 updateUI(user, etName.editText?.text.toString(), etRollNo.editText?.text.toString(), branch, semester)
-                            } else {
+                            }
+
+                            /** If sign in fails, display an error message to the user */
+                            else {
                                 // If sign in fails, display a message to the user.
                                 Log.w("SIGNUP", "createUserWithEmail:failure", task.exception)
                                 btnSignup.animError()
@@ -126,13 +138,10 @@ class SignupFragment : Fragment() {
         }
     }
 
-    private fun updateUI(
-        user: FirebaseUser?,
-        userName: String,
-        userRollNo: String,
-        userBranch: String,
-        userSemester: String
-    ) {
+    /** Updating UI by adding user data to userViewModel */
+    private fun updateUI( user: FirebaseUser?, userName: String, userRollNo: String,
+                          userBranch: String, userSemester: String) {
+
         if (user != null) {
             val accessLevel = "user"
             userViewModel.saveUserData(user.uid, userName, userRollNo, userBranch, userSemester, accessLevel)
@@ -142,6 +151,7 @@ class SignupFragment : Fragment() {
         }
     }
 
+    /** Function to autocomplete branch and semester */
     private fun setupAdapter() {
         val branchArray = resources.getStringArray(R.array.branch)
         val semesterArray = resources.getStringArray(R.array.semester)

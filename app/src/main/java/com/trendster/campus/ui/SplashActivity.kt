@@ -26,11 +26,14 @@ class SplashActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         supportActionBar?.hide()
 
+        /** If user is repeating user check either faculty or student , else open user activity */
         if (auth.currentUser != null) {
             userViewModel.readUserLevel(auth.currentUser!!.uid)
             userViewModel.readUserType.observe(
                 this,
                 {
+
+                    /** If user is faculty, open faculty activity else open user activity */
                     if (it == true)
                         handleResult(Intent(this, FacultyActivity::class.java))
                     else
@@ -41,6 +44,7 @@ class SplashActivity : AppCompatActivity() {
             handleResult(Intent(this, UserActivity::class.java))
     }
 
+    /** function to handle repeated user check and open respective activity according to the condition satisfied */
     private fun handleResult(myIntent: Intent) {
         Handler().postDelayed(
             {

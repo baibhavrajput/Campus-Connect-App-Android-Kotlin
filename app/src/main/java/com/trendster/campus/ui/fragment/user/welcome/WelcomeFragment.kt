@@ -21,6 +21,8 @@ class WelcomeFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
+
+        /** If repeating user is opening the app, then directly open Main activity */
         if (auth.currentUser != null) {
             startActivity(Intent(requireContext(), MainActivity::class.java))
             activity?.finish()
@@ -36,10 +38,12 @@ class WelcomeFragment : Fragment() {
         _binding = FragmentWelcomeBinding.inflate(inflater, container, false)
         auth = FirebaseAuth.getInstance()
 
+        /** Login button click opens login fragment */
         binding.btnGotoLogin.setOnClickListener {
             findNavController().navigate(R.id.action_welcomeFragment_to_loginFragment)
         }
 
+        /** Sign up button click opens signup fragment */
         binding.btnGoToSignUp.setOnClickListener {
             findNavController().navigate(R.id.action_welcomeFragment_to_signupFragment)
         }

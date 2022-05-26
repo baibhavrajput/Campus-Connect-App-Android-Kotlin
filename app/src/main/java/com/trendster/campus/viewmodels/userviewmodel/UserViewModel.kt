@@ -24,7 +24,8 @@ class UserViewModel : ViewModel() {
         userBranch: String,
         userSemester: String,
         accessLevel: String
-    ) {
+    )
+    {
         val data = HashMap<String, String>()
         data[USER_UID] = userUID
         data[USER_NAME] = userName

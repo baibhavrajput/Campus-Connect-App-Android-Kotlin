@@ -5,8 +5,25 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/blue_bg_textview.xml" value="0.25277777777777777" />
         <entry key="app/src/main/res/font/open_sans.xml" value="0.25277777777777777" />
-        <entry key="app/src/main/res/layout/activity_about.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/activity_about.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_class.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/activity_notice.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_onboarding.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.18432971014492755" />
+        <entry key="app/src/main/res/layout/activity_user.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/exposed_menu_item.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_forgot.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/fragment_schedule.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_second.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_signup.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/fragment_third.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_week_schedule.xml" value="0.18432971014492755" />
+        <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.30663615560640733" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/menu/class_menu.xml" value="0.28703703703703703" />
       </map>
     </option>

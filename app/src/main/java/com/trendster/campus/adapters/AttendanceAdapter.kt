@@ -1,9 +1,11 @@
 package com.trendster.campus.adapters
 
+import android.os.Build
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.DocumentSnapshot
@@ -15,6 +17,7 @@ class AttendanceAdapter : RecyclerView.Adapter<AttendanceAdapter.MyViewHolder>()
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val binding = parent.context.getSystemService(LayoutInflater::class.java)
             .inflate(R.layout.chart_row_layout, parent, false)

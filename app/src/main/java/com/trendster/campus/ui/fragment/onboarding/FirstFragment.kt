@@ -22,6 +22,8 @@ class FirstFragment : Fragment() {
         _binding = FragmentFirstBinding.inflate(inflater, container,false)
 
         val viewPager = activity?.findViewById<ViewPager2>(R.id.onboardingViewPager)
+
+        /** On clicking next button, take to next introduction fragment */
         binding.btnNextPage.setOnClickListener {
             viewPager?.currentItem = 1
         }

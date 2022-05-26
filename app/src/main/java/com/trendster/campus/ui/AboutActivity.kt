@@ -28,16 +28,19 @@ class AboutActivity : AppCompatActivity() {
         mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         setupProgressDialog()
 
-        binding.txtGithubNishant.setOnClickListener {
-            openUrl("https://github.com/knishant362")
+        /** redirecting to my github on txtGithubBaibhav press */
+        binding.txtGithubBaibhav.setOnClickListener {
+            openUrl("https://github.com/baibhavrajput")
         }
-        binding.txtGithubRohit.setOnClickListener {
-            openUrl("https://github.com/rohitjakhar")
-        }
+
+        /** closing activity on clicking close button */
         binding.closeButton.setOnClickListener {
             finish()
         }
+
         val userUID = auth.currentUser?.uid
+
+
         if (userUID != null) {
             binding.btnSubmit.setOnClickListener {
                 when {

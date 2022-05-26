@@ -39,12 +39,12 @@
 
     <string name="backbutton">BackButton</string>
     <string name="version_1_0_0">Version 1.0.0</string>
-    <string name="campushub_desc">CampusHub is a Android application built to help college student to help in monitoring his attendance and help to manage his Schedule. It also help in accessing all study material at one place. Student gets notifications regarding all important notices, events, etc.</string>
+    <string name="campushub_desc">CampusConnect is an Android application built to help college student so that they can monitor their attendance and manage their schedule. It also help in accessing all study material at one place. Student gets notifications regarding all important notices, events, etc.</string>
     <string name="quot_start_succeding_stop_seeking_quot">Start Learning Stop Seeking</string>
     <string name="developed_by">Developed by</string>
     <string name="android_developer">Android Developer</string>
-    <string name="we_will_hear_your_feedback_and_suggestions_and_try_to_add_new_features_based_on_your_request_thanks_for_using_stumate">We will hear your Feedback and Suggestions and try to add new features based on your request. Thanks for using CampusHub!</string>
-    <string name="knvrssaikiran_gmail_com">knishant362@gmail.com</string>
+    <string name="we_will_hear_your_feedback_and_suggestions_and_try_to_add_new_features_based_on_your_request_thanks_for_using_stumate">I will like to hear your Feedback and Suggestions and try to add new features based on your request. Thanks for using CampusConnect.</string>
+    <string name="knvrssaikiran_gmail_com">baibhavrajputt@gmail.com</string>
     <string name="please_give_your_valuable_feedback">Please give your valuable Feedback</string>
     <string name="submit_feedback">Submit Feedback</string>
     <string name="about_us">About Us</string>

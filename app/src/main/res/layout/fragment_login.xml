@@ -151,7 +151,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="24dp"
                             android:fontFamily="@font/product_sans_regular"
-                            android:text="Welcome to CampuHub"
+                            android:text="Welcome to CampusConnect"
                             android:textColor="#F5000000"
                             android:textSize="24sp"
                             android:textStyle="bold"

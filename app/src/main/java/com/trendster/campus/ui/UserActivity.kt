@@ -18,6 +18,7 @@ class UserActivity : AppCompatActivity() {
         _binding = ActivityUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        /** Hiding action bar in user activity */
         supportActionBar?.hide()
 
         userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)

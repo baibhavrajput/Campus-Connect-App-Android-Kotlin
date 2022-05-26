@@ -43,11 +43,13 @@ class MainActivity : AppCompatActivity() {
         val navView: NavigationView = findViewById(R.id.nav_view)
         navController = findNavController(R.id.nav_host_fragment)
 
+/**        Drawer Menu at top */
         val drawerMenu = binding.appBar.btnDrawer
         drawerMenu.setOnClickListener {
             drawerLayout.openDrawer(GravityCompat.START)
         }
 
+/**        Profile button in Drawer Menu */
         binding.appBar.btnProfile.setOnClickListener {
             val currentFrag = navController.currentDestination?.label as String
             Log.d("MYFeg", navController.currentDestination!!.label as String)
@@ -58,6 +60,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+/**        Adding Fragments to bottom App Bar */
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.scheduleFragment,
@@ -67,12 +70,13 @@ class MainActivity : AppCompatActivity() {
             drawerLayout
         )
 
-//        setupActionBarWithNavController(navController)
+/**        setting up Action Bar With NavController(navController) */
         binding.appBar.myLayout.bottomNavigationView.setupWithNavController(navController)
         navView.setupWithNavController(navController)
 
         mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
+/**        binding Navigation View items to their respective fragments & activities */
         binding.navView.setNavigationItemSelectedListener {
 
             when (it.itemId) {
@@ -99,6 +103,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+/**    function for back button */
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) ||

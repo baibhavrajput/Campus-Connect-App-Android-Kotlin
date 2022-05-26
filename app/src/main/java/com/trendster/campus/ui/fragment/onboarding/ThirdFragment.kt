@@ -24,10 +24,14 @@ class ThirdFragment : Fragment() {
         _binding = FragmentThirdBinding.inflate(inflater, container, false)
 
         val viewPager = activity?.findViewById<ViewPager2>(R.id.onboardingViewPager)
+
+        /** On clicking finish button, open Main activity */
         binding.btnFinish.setOnClickListener {
             startActivity(Intent(requireContext(), MainActivity::class.java))
             requireActivity().finish()
         }
+
+        /** On clicking previous button, take to previous introduction fragment */
         binding.btnNextPrevious.setOnClickListener {
             viewPager?.currentItem = 1
         }

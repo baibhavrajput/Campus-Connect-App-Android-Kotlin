@@ -48,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/product_sans_medium"
-                android:text="CampusHub"
+                android:text="CampusConnect"
                 android:textColor="@color/black"
                 android:textSize="38sp"
                 app:layout_constraintEnd_toEndOf="@+id/textView11"
