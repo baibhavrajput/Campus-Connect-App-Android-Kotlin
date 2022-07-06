@@ -31,21 +31,22 @@ class SubjectDetailsActivity : AppCompatActivity() {
         supportActionBar?.hide()
         auth = FirebaseAuth.getInstance()
 
-        subjectViewModel = ViewModelProvider(this).get(SubjectViewModel::class.java)
+//        subjectViewModel = ViewModelProvider(this).get(SubjectViewModel::class.java)
 
-        val subject = intent.getStringExtra(SUBJECT_NAME)
-        val faculty = intent.getStringExtra(FACULTY_NAME)
-        val subjectDesc = intent.getStringExtra(SUBJECT_DESC)
+//        val subject = intent.getStringExtra(SUBJECT_NAME)
+//        val faculty = intent.getStringExtra(FACULTY_NAME)
+//        val subjectDesc = intent.getStringExtra(SUBJECT_DESC)
 
-        Toast.makeText(this, subject, Toast.LENGTH_SHORT).show()
-        binding.closeButton.setOnClickListener {
-            finish()
-        }
+//        Toast.makeText(this, faculty, Toast.LENGTH_SHORT).show()
+//        binding.closeButton.setOnClickListener {
+//            finish()
+//        }
 
-        if (subject != null && faculty != null && subjectDesc != null) {
-            auth.currentUser?.uid?.let { subjectViewModel.userAuthdata(subject, faculty, subjectDesc, it) }
-            Log.d("heKL", subject)
-        }
+//        if (subject != null && faculty != null && subjectDesc != null) {
+//            auth.currentUser?.uid?.let { subjectViewModel.userAuthdata(subject, faculty, subjectDesc, it) }
+//            Log.d("heKL", subject)
+//        }
+
         navController = findNavController(R.id.nav_host_subject_content)
         binding.subjectBottomNav.setupWithNavController(navController)
     }

@@ -90,7 +90,7 @@ class LoginFragment : Fragment() {
                     auth.signInWithEmailAndPassword(etEmail.editText?.text.toString(), etPassword.editText?.text.toString())
                         .addOnCompleteListener(requireActivity()) { task ->
 
-                            /** If login is successful */
+                            /** If login is successful,  */
                             if (task.isSuccessful) {
                                 // Sign in success, update UI with the signed-in user's information
                                 Log.d("LoginSign", "signInWithEmail:success")
@@ -98,6 +98,7 @@ class LoginFragment : Fragment() {
                                 updateUI(user)
                             }
 
+                            /** If log in fails, display an error message to the user */
                             else {
                                 // If sign in fails, display a message to the user.
                                 Log.w("LoginSign", "signInWithEmail:failure", task.exception)

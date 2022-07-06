@@ -2,6 +2,7 @@ package com.trendster.campus.adapters
 
 import android.content.Context
 import android.content.res.ColorStateList
+import android.os.Build
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -21,8 +22,12 @@ class ScheduleAdapter(val onButtonClick: (String?) -> Unit) : RecyclerView.Adapt
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val binding = parent.context.getSystemService(LayoutInflater::class.java)
-            .inflate(R.layout.schedule_row_layout, parent, false)
+        val binding = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            parent.context.getSystemService(LayoutInflater::class.java)
+                .inflate(R.layout.schedule_row_layout, parent, false)
+        } else {
+            TODO("VERSION.SDK_INT < M")
+        }
 
         return MyViewHolder(binding)
     }

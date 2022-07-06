@@ -47,11 +47,7 @@ class ViewPdfActivity : AppCompatActivity() {
     }
 
     private fun downloadPdfFromInternet(url: String, dirPath: String, fileName: String) {
-        PRDownloader.download(
-            url,
-            dirPath,
-            fileName
-        ).build()
+        PRDownloader.download( url, dirPath, fileName).build()
             .start(object : OnDownloadListener {
                 override fun onDownloadComplete() {
                     Toast.makeText(this@ViewPdfActivity, "downloadComplete", Toast.LENGTH_LONG)

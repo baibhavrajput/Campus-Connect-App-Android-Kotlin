@@ -32,7 +32,6 @@ const val ASSIGNMENT_DUE_DATE = "dueDate"
 const val ASSIGNMENT_POST_DATE = "postDate"
 
 /**Schedule Firestore Keys*/
-
 const val F_LECTURE_TYPE = "TYPE"
 const val F_SUBJECT_NAME = "subjectName"
 const val F_FACULTY_NAME = "facultyName"

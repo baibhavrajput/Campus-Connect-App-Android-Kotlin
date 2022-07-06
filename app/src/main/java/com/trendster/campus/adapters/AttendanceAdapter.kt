@@ -17,16 +17,20 @@ class AttendanceAdapter : RecyclerView.Adapter<AttendanceAdapter.MyViewHolder>()
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
-    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val binding = parent.context.getSystemService(LayoutInflater::class.java)
-            .inflate(R.layout.chart_row_layout, parent, false)
+        val binding = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            parent.context.getSystemService(LayoutInflater::class.java)
+                .inflate(R.layout.chart_row_layout, parent, false)
+        } else {
+            TODO("VERSION.SDK_INT < M")
+        }
         return MyViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val docs = attendance[position]
         Log.d("ScheduleList11", attendance.size.toString())
+
         ChartRowLayoutBinding.bind(holder.itemView).apply {
 
             if (docs != null) {

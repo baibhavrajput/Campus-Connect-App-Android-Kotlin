@@ -1,5 +1,6 @@
 package com.trendster.campus.adapters
 
+import android.os.Build
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -16,8 +17,12 @@ class NotificationAdapter : RecyclerView.Adapter<NotificationAdapter.MyViewHolde
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val binding = parent.context.getSystemService(LayoutInflater::class.java)
-            .inflate(R.layout.notification_row_layout, parent, false)
+        val binding = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            parent.context.getSystemService(LayoutInflater::class.java)
+                .inflate(R.layout.notification_row_layout, parent, false)
+        } else {
+            TODO("VERSION.SDK_INT < M")
+        }
 
         return MyViewHolder(binding)
     }

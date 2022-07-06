@@ -45,19 +45,28 @@ class FacultyLoginFragment : Fragment() {
         btnSignup = binding.btnGoToSignup
         txtForgotPass = binding.txtForgotPassword
 
+        /** calling login function to login an existing facculty */
         login()
+
+        /** If don't have an account, then take back to signup fragment */
         btnSignup.setOnClickListener {
             findNavController().navigate(R.id.action_facultyLoginFragment_to_facultySignupFragment)
         }
+
+        /** If forgot password, then take to forgot password fragment */
         txtForgotPass.setOnClickListener {
             findNavController().navigate(R.id.action_facultyLoginFragment_to_forgotFragment)
         }
+
+        /** If back button is clicked , take back to previous fragment */
         binding.btnBack.setOnClickListener {
             findNavController().navigateUp()
         }
 
         return binding.root
     }
+
+    /** Function to login an existing faculty by matching its details from firebase */
     private fun login() {
         btnLogin.setOnClickListener {
             when {
@@ -70,14 +79,21 @@ class FacultyLoginFragment : Fragment() {
                     return@setOnClickListener
                 }
                 else -> {
+
+                    /** Login faculty using Firebase */
                     auth.signInWithEmailAndPassword(etEmail.editText?.text.toString(), etPassword.editText?.text.toString())
                         .addOnCompleteListener(requireActivity()) { task ->
+
+                            /** If login is successful, start the Faculty activity */
                             if (task.isSuccessful) {
                                 // Sign in success, update UI with the signed-in user's information
                                 Log.d("LoginSign", "signInWithEmail:success")
                                 val user = auth.currentUser
                                 updateUI(user)
-                            } else {
+                            }
+
+                            /** If log in fails, display an error message to the faculty */
+                            else {
                                 // If sign in fails, display a message to the user.
                                 Log.w("LoginSign", "signInWithEmail:failure", task.exception)
                                 Toast.makeText(
@@ -92,6 +108,7 @@ class FacultyLoginFragment : Fragment() {
         }
     }
 
+    /** function to start Faculty activity if login is successful */
     private fun updateUI(user: FirebaseUser?) {
         if (user != null) {
             startActivity(Intent(requireContext(), FacultyActivity::class.java))

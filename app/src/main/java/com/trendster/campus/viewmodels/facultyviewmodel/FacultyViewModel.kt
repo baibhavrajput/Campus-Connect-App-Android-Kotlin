@@ -44,15 +44,18 @@ class FacultyViewModel : ViewModel() {
     val readClasswork: LiveData<List<DocumentSnapshot?>>
         get() = _readClasswork
 
+    /** function to fetch faculty subjects */
     fun fetchFacultySubjects(facultyUID: String) {
 
         firestore.collection("Faculty").document(facultyUID)
-            .collection("subjectList").get().addOnSuccessListener { myData ->
+            .collection("subjectList").get()
+            .addOnSuccessListener { myData ->
                 val docs = myData.documents
                 _readFacultySubjects.postValue(docs)
             }
     }
 
+    /** function to fetch students details from Firestore for faculty */
     fun fetchStudents(branch: String, semester: String) {
         firestore.collection("Users")
             .whereEqualTo(USER_BRANCH, branch)
@@ -64,6 +67,7 @@ class FacultyViewModel : ViewModel() {
             }
     }
 
+    /** Function to fetch attendance of a student from Firestore for faculty */
     fun fetchAttendance(studentUID: String, subjectName: String) {
         firestore.collection("Users")
             .document(studentUID).collection("Attendance")
@@ -74,6 +78,7 @@ class FacultyViewModel : ViewModel() {
             }
     }
 
+    /** Function to update attendance to Firestore */
     fun updateAttendance(studentUID: String, subjectName: String, attendance: Map<String, Long>) {
         firestore.collection("Users")
             .document(studentUID).collection("Attendance")

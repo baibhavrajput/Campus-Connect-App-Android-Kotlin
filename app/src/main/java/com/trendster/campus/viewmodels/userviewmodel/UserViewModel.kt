@@ -44,10 +44,11 @@ class UserViewModel : ViewModel() {
                 Log.d("saveUserData", "failed")
             }
 
-        /** Create subjects according to Branch and Semester*/
+        /** Load subjects according to Branch and Semester from Firestore */
         loadSubjects(userUID, userBranch, userSemester)
     }
 
+    /** function to load subjects from Firestore */
     private fun loadSubjects(userUID: String, userBranch: String, userSemester: String) {
         val subjectArray = arrayListOf<String>()
         firestore.collection("Data").document(userBranch)
@@ -66,6 +67,7 @@ class UserViewModel : ViewModel() {
             }
     }
 
+    /** function to create attendance for students in Firestore */
     private fun createAttendance(userUID: String, mySubject: String) {
 
         val dummyData = HashMap<String, Long>()
@@ -83,6 +85,7 @@ class UserViewModel : ViewModel() {
             }
     }
 
+    /** function to save faculty data of faculty to Firestore */
     fun saveFacultyData(
         userUID: String,
         userName: String
@@ -100,6 +103,7 @@ class UserViewModel : ViewModel() {
             }
     }
 
+    /** function to read whether the user is student or faculty */
     fun readUserLevel(uid: String) {
         firestore.collection("Faculty").document(uid).addSnapshotListener { value, error ->
             val isFaculty = value?.exists()

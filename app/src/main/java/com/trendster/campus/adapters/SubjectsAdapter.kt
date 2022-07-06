@@ -3,12 +3,14 @@ package com.trendster.campus.adapters
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
+import android.os.Build
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
@@ -25,37 +27,43 @@ class SubjectsAdapter : RecyclerView.Adapter<SubjectsAdapter.MyViewHolder>() {
     var subjects = mutableListOf<DocumentSnapshot?>()
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-//        init {
-//            itemView.setOnClickListener {
-//                val position = adapterPosition
-//                Toast.makeText(itemView.context, "Click ${position+1}", Toast.LENGTH_SHORT).show()
-//            }
-//        }
+        init {
+            itemView.setOnClickListener {
+                val position = adapterPosition
+                Toast.makeText(itemView.context, "Click ${position+1}", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val binding = parent.context.getSystemService(LayoutInflater::class.java)
-            .inflate(R.layout.subjects_row_layout, parent, false)
+        val binding = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            parent.context.getSystemService(LayoutInflater::class.java)
+                .inflate(R.layout.subjects_row_layout, parent, false)
+        } else {
+            TODO("VERSION.SDK_INT < M")
+        }
 
         return MyViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val data = subjects[position]
-        holder.itemView.setOnClickListener { v ->
-            val intent = Intent(v?.context, SubjectDetailsActivity::class.java)
-            intent.putExtra(SUBJECT_NAME, data!!.id)
-
-            val facultyName = data[FACULTY_NAME]
-            intent.putExtra(FACULTY_NAME, facultyName.toString())
-
-            val subjectDesc = data[SUBJECT_DESC]
-            intent.putExtra(SUBJECT_DESC, subjectDesc.toString())
-            v?.context?.startActivity(intent)
-        }
+        val data = subjects.get(position)
+        val faculty = subjects.get(position)
+//        holder.itemView.setOnClickListener { v ->
+//            val intent = Intent(v?.context, SubjectDetailsActivity::class.java)
+//            intent.putExtra(SUBJECT_NAME, data!!.id)
+//
+//            val facultyName = data.get(FACULTY_NAME)
+//            intent.putExtra(FACULTY_NAME, facultyName.toString())
+//
+//            val subjectDesc = data.get(SUBJECT_DESC)
+//            intent.putExtra(SUBJECT_DESC, subjectDesc.toString())
+//            v?.context?.startActivity(intent)
+//        }
 
         SubjectsRowLayoutBinding.bind(holder.itemView).apply {
             txtSub.text = data!!.id
+//            txtFacultyName.text = faculty!!.
             Log.d("txtSub", subjects.size.toString())
             Log.d("txtSub", subjects.size.toString())
 

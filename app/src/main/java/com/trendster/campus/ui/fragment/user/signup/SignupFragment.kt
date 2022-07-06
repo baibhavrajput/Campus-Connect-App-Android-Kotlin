@@ -121,7 +121,7 @@ class SignupFragment : Fragment() {
                                 updateUI(user, etName.editText?.text.toString(), etRollNo.editText?.text.toString(), branch, semester)
                             }
 
-                            /** If sign in fails, display an error message to the user */
+                            /** If sign up fails, display an error message to the user */
                             else {
                                 // If sign in fails, display a message to the user.
                                 Log.w("SIGNUP", "createUserWithEmail:failure", task.exception)

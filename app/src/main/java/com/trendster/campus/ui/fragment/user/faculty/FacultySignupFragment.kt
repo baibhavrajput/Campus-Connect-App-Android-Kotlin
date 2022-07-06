@@ -43,11 +43,13 @@ class FacultySignupFragment : Fragment() {
         etPassword = binding.etPassword
         btnSignup = binding.btnSignup
 
+        /** Calling Sign Up function to add new faculty */
         signUp()
 
         return binding.root
     }
 
+    /** Function to signup new faculty and store its details to firebase */
     private fun signUp() {
         btnSignup.setOnClickListener {
             when {
@@ -63,14 +65,20 @@ class FacultySignupFragment : Fragment() {
                     etPassword.error = "Fill this"
                 }
                 else -> {
+                    /** Adding faculty data to Firebase */
                     auth.createUserWithEmailAndPassword(etEmail.text.toString(), etPassword.text.toString())
                         .addOnCompleteListener(requireActivity()) { task ->
+
+                            /** If adding data to firebase and Sign Up is successful , update UI by adding data to userViewModel */
                             if (task.isSuccessful) {
                                 // Sign in success, update UI with the signed-in user's information
                                 Log.d("SIGNUP", "createUserWithEmail:success")
                                 val user = auth.currentUser
                                 updateUI(user, etName.text.toString())
-                            } else {
+                            }
+
+                            /** If sign up fails, display an error message to the user */
+                            else {
                                 // If sign in fails, display a message to the user.
                                 Log.w("SIGNUP", "createUserWithEmail:failure", task.exception)
                                 Toast.makeText(
@@ -84,6 +92,7 @@ class FacultySignupFragment : Fragment() {
         }
     }
 
+    /** Updating UI by adding faculty data to userViewModel */
     private fun updateUI(
         user: FirebaseUser?,
         userName: String

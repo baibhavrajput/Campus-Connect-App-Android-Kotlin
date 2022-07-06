@@ -60,7 +60,8 @@ class SubjectsFragment : Fragment() {
                     mAdapter.notifyDataSetChanged()
                     placeHolderVisibility(View.GONE)
                     recyclerView.hideShimmer()
-                } else {
+                }
+                else {
                     mAdapter.setData(mutableListOf())
                     mAdapter.notifyDataSetChanged()
                     recyclerView.hideShimmer()
@@ -78,7 +79,8 @@ class SubjectsFragment : Fragment() {
             {
                 if (it.first == "null") {
                     recyclerView.showShimmer()
-                } else {
+                }
+                else {
                     placeHolderVisibility(View.GONE)
                     Toast.makeText(requireContext(), "Branch- ${it.first} , Semester: ${it.second}", Toast.LENGTH_SHORT).show()
                     mainViewModel.loadSubjects(it.first, it.second)

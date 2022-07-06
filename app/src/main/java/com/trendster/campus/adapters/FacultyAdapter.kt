@@ -1,6 +1,7 @@
 package com.trendster.campus.adapters
 
 import android.content.Intent
+import android.os.Build
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -22,14 +23,20 @@ class FacultyAdapter : RecyclerView.Adapter<FacultyAdapter.MyViewHolder>() {
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val binding = parent.context.getSystemService(LayoutInflater::class.java)
-            .inflate(R.layout.faculty_row_layout, parent, false)
+        val binding = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            parent.context.getSystemService(LayoutInflater::class.java)
+                .inflate(R.layout.faculty_row_layout, parent, false)
+        } else {
+            TODO("VERSION.SDK_INT < M")
+        }
         return MyViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+
         val docs = faculty[position]?.data
         Log.d("ScheduleList11", faculty.size.toString())
+
         FacultyRowLayoutBinding.bind(holder.itemView).apply {
 
             val subName = docs?.get("subName") as String?

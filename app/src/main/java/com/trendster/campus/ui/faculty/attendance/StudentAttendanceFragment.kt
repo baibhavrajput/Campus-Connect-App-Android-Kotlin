@@ -32,6 +32,9 @@ class StudentAttendanceFragment : DialogFragment() {
         _binding = FragmentStudentAttendanceBinding.inflate(inflater, container, false)
 
         val studentInfo = args.studentInfo
+
+        /** Fetch Subject title and Student Name in attendance fragment
+         * carrying over Subject title and Student name from previous fragment */
         if (studentInfo.subjectName != null && studentInfo.studentUID != null) {
             binding.txtSubjectTitle.text = studentInfo.subjectName
             binding.txtStudentNme.text = studentInfo.studentName
@@ -39,6 +42,7 @@ class StudentAttendanceFragment : DialogFragment() {
             facultyViewModel.fetchAttendance(studentInfo.studentUID, studentInfo.subjectName)
         }
 
+        /** Observe readAttendance from facultyViewModel and display present attendance and total attendance */
         facultyViewModel.readAttendance.observe(
             viewLifecycleOwner,
             { myData ->
@@ -50,26 +54,31 @@ class StudentAttendanceFragment : DialogFragment() {
             }
         )
 
+        /** Clicking Present decrease button, decrease Present by 1 on each press */
         binding.btnPdecrease.setOnClickListener {
             presentClass = presentClass?.minus(1)
             binding.txtPresentClass.text = presentClass.toString()
         }
 
+        /** Clicking Present increase button, increase Present by 1 on each press */
         binding.btnPincrease.setOnClickListener {
             presentClass = presentClass?.plus(1)
             binding.txtPresentClass.text = presentClass.toString()
         }
 
+        /** Clicking Total decrease button, decrease Total by 1 on each press */
         binding.btnTdecrease.setOnClickListener {
             totalClass = totalClass?.minus(1)
             binding.txtTotalClass.text = totalClass.toString()
         }
 
+        /** Clicking Total decrease button, decrease Total by 1 on each press */
         binding.btnTincrease.setOnClickListener {
             totalClass = presentClass?.plus(1)
             binding.txtTotalClass.text = totalClass.toString()
         }
 
+        /** Observe attendanceStatus and show message if attendance is updated successfully else show error message */
         facultyViewModel.attendanceStatus.observe(
             viewLifecycleOwner,
             {
@@ -81,6 +90,7 @@ class StudentAttendanceFragment : DialogFragment() {
             }
         )
 
+        /** Clicking Update Attendance button, update attendance to facultyViewModel which uploads attendance to firestore */
         binding.btnUpdateAttendance.setOnClickListener {
 
             val attendance = HashMap<String, Long>()

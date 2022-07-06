@@ -122,17 +122,16 @@
                 android:id="@+id/imgNoClasses"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:layout_below="@id/scheduleRecycler"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="60dp"
-                android:textColor="@color/light_blue_600"
-                android:text="No Classes for Today"
-                android:visibility="gone"
-                tools:visibility="visible"
                 android:fontFamily="@font/product_sans_bold"
+                android:text="No Classes for Today"
                 android:textAlignment="center"
+                android:textColor="@color/light_blue_600"
                 android:textSize="22sp"
-                />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <ImageView
                 android:id="@+id/txtNoClasses"

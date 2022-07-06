@@ -68,6 +68,7 @@ class MainViewModel : ViewModel() {
     var selectedUserBranch = "CSE"
     var selectedUserSemester = "1"
 
+    /** fetching branch and semester of the user in order to show schedule */
     fun loadScheduleRequest(userUID: String, type: String, requiredDay: String) {
         firestore.collection("Users").document(userUID)
             .addSnapshotListener { value, error ->
@@ -90,12 +91,10 @@ class MainViewModel : ViewModel() {
             }
     }
 
-    private fun loadSchedule(
-        userBranch: String,
-        userSemester: String,
-        requiredDay: String,
-        type: String
-    ) {
+    /** Function to today's schedule from firebase */
+    private fun loadSchedule( userBranch: String, userSemester: String, requiredDay: String,
+                              type: String)
+    {
         firestore.collection("Data").document(userBranch)
             .collection(userSemester).document("Schedule")
             .collection(requiredDay).get().addOnSuccessListener { data ->
@@ -113,6 +112,7 @@ class MainViewModel : ViewModel() {
             }
     }
 
+
     fun loadSubjects(userBranch: String, userSemester: String) {
         Log.d("NIh", userBranch + userSemester)
         firestore.collection("Data").document(userBranch)
@@ -123,6 +123,8 @@ class MainViewModel : ViewModel() {
                 Log.d("loadSubjects", myData.toString())
             }
     }
+
+    /** Function to get today's day in English to show schedule using today's date  */
     fun todayDay(): String {
         val today = Calendar.getInstance()
         val date = today.time
@@ -130,17 +132,16 @@ class MainViewModel : ViewModel() {
         Log.d("myTime", today.toString())
         val day = SimpleDateFormat("EEEE", Locale.ENGLISH).format(date.time)
 
-        /**individual item */
+        /** individual item */
         val myday = today.get(Calendar.DAY_OF_MONTH)
 
         Log.d("myTime11", myday.toString())
-        /**individual item */
+        /** individual item */
 
         return day
     }
 
     /**Attendance Section*/
-
     fun loadAttendance(userUID: String) {
         firestore.collection("Users").document(userUID)
             .collection("Attendance").addSnapshotListener { value, error ->
@@ -149,12 +150,15 @@ class MainViewModel : ViewModel() {
             }
     }
 
+    /** function to load user profile from Firestore */
     fun loadUserProfile(userUID: String) {
         firestore.collection("Users").document(userUID)
             .get().addOnSuccessListener { myData ->
                 _readUserProfile.postValue(myData)
             }
     }
+
+    /** function to update profile in Firestore */
     fun updateUserProfile(
         context: Context,
         userUID: String,
@@ -182,6 +186,7 @@ class MainViewModel : ViewModel() {
             }
     }
 
+    /** function to load notifications from Firestore */
     fun loadNotifications() {
         firestore.collection("Notifications")
             .addSnapshotListener { value, error ->
@@ -206,6 +211,7 @@ class MainViewModel : ViewModel() {
             }
     }
 
+    /** function to fetch userName from Firestore */
     fun fetchUserName(userUID: String) {
         firestore
             .collection("Users").document(userUID)
@@ -214,6 +220,7 @@ class MainViewModel : ViewModel() {
             }
     }
 
+    /** function to submit feedback to Firestore */
     fun submitFeedBack(userUID: String, userFeedback: String) {
         val data = HashMap<String, String>()
         data[USER_FEEDBACK] = userFeedback

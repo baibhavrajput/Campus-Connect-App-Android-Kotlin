@@ -37,8 +37,8 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="25dp"
-                    android:text="Your Subjects"
                     android:fontFamily="@font/product_sans_regular"
+                    android:text="Your Subjects"
                     android:textColor="@color/light_blue_600"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -91,7 +91,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_below="@id/helloLayout"
-                android:background="@drawable/bottom_rounded_circle"/>
+                android:background="@drawable/bottom_rounded_circle" />
 
             <RelativeLayout
             android:id="@+id/hellLayout"
@@ -121,17 +121,16 @@
                 android:id="@+id/imgNoClasses"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/helloLayout"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="70dp"
-                android:textColor="@color/light_blue_600"
-                android:text="No Subjects Available"
-                android:visibility="gone"
-                tools:visibility="visible"
-                android:layout_below="@id/helloLayout"
                 android:fontFamily="@font/product_sans_bold"
+                android:text="No Subjects Available"
                 android:textAlignment="center"
+                android:textColor="@color/light_blue_600"
                 android:textSize="22sp"
-                />
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <TextView
                 android:id="@+id/imgNoClasses2"
