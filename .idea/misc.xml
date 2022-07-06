@@ -47,8 +47,9 @@
         <entry key="app/src/main/res/layout/expand_coll_row_layout.xml" value="0.19746376811594202" />
         <entry key="app/src/main/res/layout/exposed_menu_item.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/faculty_row_layout.xml" value="0.19746376811594202" />
-        <entry key="app/src/main/res/layout/fragment_classwork.xml" value="0.18432971014492755" />
+        <entry key="app/src/main/res/layout/fragment_classwork.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_collection_expand.xml" value="0.18432971014492755" />
+        <entry key="app/src/main/res/layout/fragment_create_classwork.xml" value="0.1793478260869565" />
         <entry key="app/src/main/res/layout/fragment_faculty_login.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/fragment_faculty_signup.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.33" />
@@ -59,13 +60,16 @@
         <entry key="app/src/main/res/layout/fragment_schedule.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_signup.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/fragment_sort_subject.xml" value="0.1793478260869565" />
         <entry key="app/src/main/res/layout/fragment_student_attendance.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_students.xml" value="0.2947916666666667" />
-        <entry key="app/src/main/res/layout/fragment_subject_collection.xml" value="0.19746376811594202" />
+        <entry key="app/src/main/res/layout/fragment_subject_collection.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_subjects.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_submission.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_third.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_week_schedule.xml" value="0.18432971014492755" />
         <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.30663615560640733" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.1838768115942029" />
         <entry key="app/src/main/res/layout/notification_row_layout.xml" value="0.33" />
         <entry key="app/src/main/res/layout/schedule_placeholder_layout.xml" value="0.1838768115942029" />
         <entry key="app/src/main/res/layout/schedule_row_layout.xml" value="0.33" />
@@ -74,7 +78,9 @@
         <entry key="app/src/main/res/layout/subject_placeholder_layout.xml" value="0.1838768115942029" />
         <entry key="app/src/main/res/layout/subjects_row_layout.xml" value="0.33" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.28072916666666664" />
         <entry key="app/src/main/res/menu/class_menu.xml" value="0.28703703703703703" />
+        <entry key="app/src/main/res/menu/subject_details_menu.xml" value="0.28072916666666664" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.28888888888888886" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.28888888888888886" />
       </map>

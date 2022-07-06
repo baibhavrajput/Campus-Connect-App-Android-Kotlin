@@ -55,6 +55,7 @@ class AttendanceAdapter : RecyclerView.Adapter<AttendanceAdapter.MyViewHolder>()
         }
     }
 
+    /** Function to set different color to different subject attendance cards */
     private fun setColors(
         myImage: Int,
         cardImages: ConstraintLayout,
@@ -62,6 +63,7 @@ class AttendanceAdapter : RecyclerView.Adapter<AttendanceAdapter.MyViewHolder>()
         cardImages.setBackgroundResource(myImage)
     }
 
+    /** Function to set different background to different subject attendance cards*/
     private fun checkImage(
         position: Int,
     ): Int {

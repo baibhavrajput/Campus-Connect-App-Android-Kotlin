@@ -27,12 +27,12 @@ class SubjectsAdapter : RecyclerView.Adapter<SubjectsAdapter.MyViewHolder>() {
     var subjects = mutableListOf<DocumentSnapshot?>()
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        init {
-            itemView.setOnClickListener {
-                val position = adapterPosition
-                Toast.makeText(itemView.context, "Click ${position+1}", Toast.LENGTH_SHORT).show()
-            }
-        }
+//        init {
+//            itemView.setOnClickListener {
+//                val position = adapterPosition
+//                Toast.makeText(itemView.context, "Click ${position+1}", Toast.LENGTH_SHORT).show()
+//            }
+//        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

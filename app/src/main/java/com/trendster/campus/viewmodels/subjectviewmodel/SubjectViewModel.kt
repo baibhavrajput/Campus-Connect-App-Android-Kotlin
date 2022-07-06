@@ -169,7 +169,7 @@ class SubjectViewModel : ViewModel() {
                     val docs = value?.documents
                     _readCollExtend.postValue(docs!!)
                 }
-            Log.d("mySubje", selectedSubject)
+            Log.d("mySubject", selectedSubject)
         }
     }
 }

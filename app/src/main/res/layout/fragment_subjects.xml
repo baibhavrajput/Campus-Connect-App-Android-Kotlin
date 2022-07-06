@@ -63,27 +63,6 @@
                     android:textColor="@color/light_blue_600"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/txtBS2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/imgSortSubject"
-                    android:layout_alignStart="@+id/imgSortSubject"
-                    android:layout_alignEnd="@+id/imgSortSubject"
-                    android:textAlignment="center"
-                    android:text="Sort"
-                    android:textColor="@color/light_blue_900"
-                    android:textSize="14sp" />
-
-                <ImageView
-                    android:id="@+id/imgSortSubject"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginTop="25dp"
-                    android:src="@drawable/ic_sort"/>
-
         </RelativeLayout>
 
             <View

@@ -70,10 +70,6 @@ class SubjectsFragment : Fragment() {
             }
         )
 
-        binding.imgSortSubject.setOnClickListener {
-            findNavController().navigate(R.id.action_subjectsFragment_to_sortSubjectFragment)
-        }
-
         mainViewModel.readValues.observe(
             viewLifecycleOwner,
             {
