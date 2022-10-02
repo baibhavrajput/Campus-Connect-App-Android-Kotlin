@@ -1,7 +1,7 @@
 # Campus Connect
 
 ## Description
-**Campus Connect** is an Android app which aims to bridge the gap betweens the students and the faculty and admins. 
+**Campus Connect** is an Android app which aims to bridge the gap between the students and the facultys and the admins. 
 
 ### Features for students -
 - Students can see their attendance subject wise.
@@ -29,11 +29,11 @@
 
 ### 1.Students
   
-**Students Section** divided into mainly 3 Sections  -Data is Displayed according to thier selected Branch and Semestter.
+**Students Section** divided into mainly 3 Sections  - Data is displayed according to thier selected Branch and Semester.
 
 - **1. Schedule** - Student gets thier Attendance (maintained by faculty in live-time) and Schedule according to Day of the Week
-- **2. Subjects** - Student gets thier Subject list as per given in Semester. Every Subject Sections of mainly 4 Study Material.
-- **3. Notifications** - Student gets Latest Notifications sent by Admisnistration
+- **2. Subjects** - Student gets thier Subject list as per given in Semester. Every Subject Section consists its study materials.
+- **3. Notifications** - Student gets Latest Notifications sent by the Admisnistration
   
   
 ||||
