@@ -56,7 +56,7 @@ Faculty can manange students attendance and study materials according to the Sub
 ||||
 |:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
 | ![](media/27.jpeg) | ![](media/35.jpeg) | ![](media/36.jpeg) |
-| ![](media/37.jpeg) |
+| ![](media/40.jpeg) | ![](media/37.jpeg) |
 
 
 
