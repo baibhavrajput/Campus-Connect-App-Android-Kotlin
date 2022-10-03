@@ -1,4 +1,5 @@
-# Campus Connect
+# Campus Connect   
+##### (Screenshots attached below)
 
 ## Description
 **Campus Connect** is an Android app which aims to bridge the gap between the students and the facultys and the admins. 
