@@ -63,7 +63,7 @@
                 android:ellipsize="end"
                 android:fontFamily="@font/product_sans_regular"
                 android:maxLines="2"
-                android:text="By : Baibhav"
+                android:text="By : Faculty Name"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="16sp"
