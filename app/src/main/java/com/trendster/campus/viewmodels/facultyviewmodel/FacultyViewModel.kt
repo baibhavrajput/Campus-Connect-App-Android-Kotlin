@@ -92,6 +92,7 @@ class FacultyViewModel : ViewModel() {
             }
     }
 
+    /** load data from Firestore to manage classwork fragment */
     fun loadClasswork() {
 
         firestore.collection("Data").document(branchName)
@@ -106,54 +107,17 @@ class FacultyViewModel : ViewModel() {
             }
     }
 
-    fun createClasswork(
-        context: Context,
-        pdfName: String,
-        pdfData: Uri,
-        workTitle: String,
-        workDesc: String,
-        dueDate: String,
-    ) {
-
-        val reference1 = storageReference
-            .child("pdf" + pdfName + "-" + System.currentTimeMillis() + ".pdf")
-
-        pdfData.let { reference1.putFile(it) }
-            .addOnSuccessListener { task ->
-
-                val uriTask = task.storage.downloadUrl
-                while (!uriTask.isComplete);
-
-                val uri = uriTask.result
-                uploadData(
-                    context,
-                    workTitle,
-                    workDesc,
-                    dueDate,
-                    pdfName,
-                    uri.toString()
-                )
-            }.addOnFailureListener {
-                showToast(context, it.message)
-                Log.d("upload failed", it.message!!)
-            }
+    fun createClasswork( context: Context, workTitle: String, workDesc: String)
+    {
+        uploadData(context, workTitle, workDesc)
     }
 
-    private fun uploadData(
-        context: Context,
-        workTitle: String,
-        workDesc: String,
-        dueDate: String,
-        pdfName: String,
-        pdfUrl: String
-    ) {
-
+    /** upload study materials link to Firestore */
+    private fun uploadData( context: Context, workTitle: String, workDesc: String)
+    {
         val data = HashMap<String, String>()
         data[ASSIGNMENT_TITLE] = workTitle
         data[ASSIGNMENT_DESC] = workDesc
-        data[ASSIGNMENT_DUE_DATE] = dueDate
-        data[COLL_PDF_TITLE] = pdfName
-        data[COLL_PDF_URL] = pdfUrl
         data[ASSIGNMENT_POST_DATE] = postDate()
 
         val part = firestore.collection("Data").document(branchName)
@@ -169,14 +133,9 @@ class FacultyViewModel : ViewModel() {
                 showToast(context, it.message)
                 Log.d("upload failed", it.message!!)
             }
-
-        val dummyData = HashMap<String, Long>()
-        dummyData[CLASS_PRESENT] = 1
-        dummyData[CLASS_TOTAL] = 1
-
-        part.collection("submissions").document("Student1").set(dummyData)
     }
 
+    /** get current date and time on uploading study materials to Firestore */
     private fun postDate(): String {
         val today = Calendar.getInstance()
         val date = today.time

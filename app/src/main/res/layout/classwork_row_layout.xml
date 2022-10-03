@@ -27,7 +27,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/light_blue_600">
 
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -55,11 +56,11 @@
                 android:layout_marginBottom="12dp"
                 android:fontFamily="@font/product_sans_regular"
                 android:text="09:50 AM"
-                android:textColor="@color/text_grey"
+                android:textColor="@color/black"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/txtWorkTitle"
-                app:layout_constraintTop_toBottomOf="@+id/txtWorkTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/txtMaterialLink" />
 
 
             <TextView
@@ -72,11 +73,28 @@
                 android:fontFamily="@font/product_sans_regular"
                 android:maxLines="2"
                 android:text="Create Objects and Programming nad hello ther how are your doing and in ma nim;e fl"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/fabSchedule"
                 app:layout_constraintTop_toTopOf="@+id/fabSchedule" />
+
+            <TextView
+                android:id="@+id/txtMaterialLink"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/product_sans_regular"
+                android:maxLines="1"
+                android:text="Create Objects and Programming nad hello ther how are your doing and in ma nim;e fl"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/fabSchedule"
+                app:layout_constraintTop_toBottomOf="@+id/txtWorkTitle" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

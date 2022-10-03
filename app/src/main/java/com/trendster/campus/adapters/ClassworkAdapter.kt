@@ -43,12 +43,11 @@ class ClassworkAdapter(private val usageType: String) : RecyclerView.Adapter<Cla
                 val myData = docs.data
                 val assignmentTitle = myData?.get(ASSIGNMENT_TITLE) as String
                 val assignmentDesc = myData[ASSIGNMENT_DESC] as String
-                val dueDate = myData[ASSIGNMENT_DUE_DATE] as String
-                val pdfName = myData[COLL_PDF_TITLE] as String
-                val pdfUrl = myData[COLL_PDF_URL] as String?
                 val postDate = myData[ASSIGNMENT_POST_DATE] as String
 
                 txtWorkTitle.text = assignmentTitle
+                txtPostTime.text = postDate
+                txtMaterialLink.text = assignmentDesc
 
                 when (usageType) {
                     "student" -> {
@@ -57,9 +56,6 @@ class ClassworkAdapter(private val usageType: String) : RecyclerView.Adapter<Cla
                             val classwork = ClassworkModel(
                                 assignmentDesc,
                                 assignmentTitle,
-                                dueDate,
-                                pdfName,
-                                pdfUrl,
                                 postDate
                             )
                             val action = ClassworkFragmentDirections.actionClassworkFragmentToSubmissionFragment(classwork)

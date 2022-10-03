@@ -21,34 +21,34 @@
             android:layout_height="match_parent">
 
 
-            <TextView
-                android:id="@+id/txtPresentClasses"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
-                android:text="25"
-                app:layout_constraintBottom_toBottomOf="@+id/textView8"
-                app:layout_constraintEnd_toStartOf="@+id/textView8"
-                app:layout_constraintTop_toTopOf="@+id/textView8" />
+<!--            <TextView-->
+<!--                android:id="@+id/txtPresentClasses"-->
+<!--                android:layout_width="11dp"-->
+<!--                android:layout_height="17dp"-->
+<!--                android:layout_marginEnd="4dp"-->
+<!--                android:text="25"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/textView8"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/textView8"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/textView8" />-->
 
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
-                android:text="|"
-                app:layout_constraintBottom_toBottomOf="@+id/txtTotalClasses"
-                app:layout_constraintEnd_toStartOf="@+id/txtTotalClasses"
-                app:layout_constraintTop_toTopOf="@+id/txtTotalClasses" />
+<!--            <TextView-->
+<!--                android:id="@+id/textView8"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="4dp"-->
+<!--                android:text="|"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/txtTotalClasses"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/txtTotalClasses"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/txtTotalClasses" />-->
 
-            <TextView
-                android:id="@+id/txtTotalClasses"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:text="40"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/txtStudentName" />
+<!--            <TextView-->
+<!--                android:id="@+id/txtTotalClasses"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:text="40"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/txtStudentName" />-->
 
             <TextView
                 android:id="@+id/txtRollNo"
@@ -68,9 +68,9 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:text="Nishant Kumar"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 android:maxLines="2"
-                app:layout_constraintEnd_toStartOf="@+id/txtPresentClasses"
                 app:layout_constraintStart_toEndOf="@+id/imageView5"
                 app:layout_constraintTop_toTopOf="@+id/imageView5" />
 

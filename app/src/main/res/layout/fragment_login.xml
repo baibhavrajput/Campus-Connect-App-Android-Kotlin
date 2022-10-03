@@ -95,7 +95,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
 
 
-                        z<cn.xm.weidongjian.progressbuttonlib.ProgressButton
+                        <cn.xm.weidongjian.progressbuttonlib.ProgressButton
                             android:id="@+id/btnLogin"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -198,11 +198,23 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:tint="@color/light_blue_600" />
 
-                        <Button
+                        <cn.xm.weidongjian.progressbuttonlib.ProgressButton
                             android:id="@+id/btnFacultyLogin_LoginFrag"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Faculty Login"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="16dp"
+                            android:backgroundTint="@color/light_blue_600"
+                            android:fontFamily="@font/product_sans_regular"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="@drawable/rounded_button"
+                            android:padding="14dp"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:textSize="16sp"
                             app:layout_constraintBottom_toTopOf="@+id/justTExt"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"

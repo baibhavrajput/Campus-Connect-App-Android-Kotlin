@@ -27,7 +27,7 @@
             android:name=".ui.faculty.ClassActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".ui.fragment.subjects.ViewPdfActivity" />
+<!--        <activity android:name=".ui.fragment.subjects.ViewPdfActivity" />-->
 
         <activity
             android:name=".ui.faculty.FacultyActivity"
@@ -43,9 +43,9 @@
             </intent-filter>
         </service>
 
-        <activity
-            android:name=".ui.fragment.subjects.subjecthome.SubjectDetailsActivity"
-            android:screenOrientation="portrait" />
+<!--        <activity-->
+<!--            android:name=".ui.fragment.subjects.subjecthome.SubjectDetailsActivity"-->
+<!--            android:screenOrientation="portrait" />-->
 
         <activity
             android:name=".ui.SplashActivity"

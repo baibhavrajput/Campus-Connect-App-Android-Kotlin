@@ -195,22 +195,6 @@ class MainViewModel : ViewModel() {
             }
     }
 
-    fun sortSubject(context: Context, userUID: String, branchChip: String, semesterChip: String) {
-        _readValues.postValue(Pair("null", "null"))
-        val data = HashMap<String, String>()
-        data[TEMP_USER_BRANCH] = branchChip
-        data[TEMP_USER_SEMESTER] = semesterChip
-        firestore.collection("Users").document(userUID)
-            .update(data as Map<String, Any>).addOnSuccessListener {
-                Toast.makeText(context, " Update Successful", Toast.LENGTH_SHORT).show()
-                Log.d("saveUserData", "Update Success")
-                _readValues.postValue(Pair(branchChip, semesterChip))
-            }.addOnFailureListener {
-                Toast.makeText(context, " Some Error Occurred", Toast.LENGTH_SHORT).show()
-                Log.d("saveUserData", it.message!!)
-            }
-    }
-
     /** function to fetch userName from Firestore */
     fun fetchUserName(userUID: String) {
         firestore

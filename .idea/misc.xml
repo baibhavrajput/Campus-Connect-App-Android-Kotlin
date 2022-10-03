@@ -42,14 +42,14 @@
         <entry key="app/src/main/res/layout/activity_view_pdf.xml" value="0.18432971014492755" />
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/chart_row_layout.xml" value="0.19746376811594202" />
-        <entry key="app/src/main/res/layout/classwork_row_layout.xml" value="0.17481884057971014" />
+        <entry key="app/src/main/res/layout/classwork_row_layout.xml" value="0.33" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/expand_coll_row_layout.xml" value="0.19746376811594202" />
         <entry key="app/src/main/res/layout/exposed_menu_item.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/faculty_row_layout.xml" value="0.19746376811594202" />
         <entry key="app/src/main/res/layout/fragment_classwork.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_collection_expand.xml" value="0.18432971014492755" />
-        <entry key="app/src/main/res/layout/fragment_create_classwork.xml" value="0.1793478260869565" />
+        <entry key="app/src/main/res/layout/fragment_create_classwork.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_faculty_login.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/fragment_faculty_signup.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.33" />
@@ -57,13 +57,14 @@
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/fragment_manage_class.xml" value="0.17481884057971014" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.19746376811594202" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.21965579710144928" />
         <entry key="app/src/main/res/layout/fragment_schedule.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_signup.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/fragment_sort_subject.xml" value="0.1793478260869565" />
         <entry key="app/src/main/res/layout/fragment_student_attendance.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_students.xml" value="0.2947916666666667" />
-        <entry key="app/src/main/res/layout/fragment_subject_collection.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_subject_collection.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_subjects.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_submission.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_third.xml" value="0.25" />
@@ -73,7 +74,7 @@
         <entry key="app/src/main/res/layout/notification_row_layout.xml" value="0.33" />
         <entry key="app/src/main/res/layout/schedule_placeholder_layout.xml" value="0.1838768115942029" />
         <entry key="app/src/main/res/layout/schedule_row_layout.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/student_row_layout.xml" value="0.1838768115942029" />
+        <entry key="app/src/main/res/layout/student_row_layout.xml" value="0.33" />
         <entry key="app/src/main/res/layout/subject_detail_row_layout.xml" value="0.33" />
         <entry key="app/src/main/res/layout/subject_placeholder_layout.xml" value="0.1838768115942029" />
         <entry key="app/src/main/res/layout/subjects_row_layout.xml" value="0.33" />

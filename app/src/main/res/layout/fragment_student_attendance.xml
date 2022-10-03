@@ -50,6 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="13"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@+id/txtPres"
                 app:layout_constraintStart_toStartOf="@+id/txtPres"
@@ -83,6 +84,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Present :"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/txtSubjectTitle"
         app:layout_constraintStart_toStartOf="@+id/txtSubjectTitle"
         app:layout_constraintTop_toBottomOf="@+id/txtStuRoll" />
@@ -93,6 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="Total :"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@+id/txtPres"
                 app:layout_constraintStart_toStartOf="@+id/txtPres"
                 app:layout_constraintTop_toBottomOf="@+id/txtPresentClass" />
@@ -125,6 +128,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="40"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@+id/txtTotalTitle"
                 app:layout_constraintStart_toStartOf="@+id/txtTotalTitle"

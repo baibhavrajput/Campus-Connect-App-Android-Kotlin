@@ -1,7 +1,6 @@
 package com.trendster.campus.adapters
 
 import android.content.Context
-import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.util.Log
@@ -10,17 +9,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.DocumentSnapshot
 import com.trendster.campus.R
 import com.trendster.campus.databinding.SubjectsRowLayoutBinding
-import com.trendster.campus.ui.fragment.subjects.subjecthome.SubjectDetailsActivity
-import com.trendster.campus.utils.FACULTY_NAME
-import com.trendster.campus.utils.SUBJECT_DESC
-import com.trendster.campus.utils.SUBJECT_NAME
 
 class SubjectsAdapter : RecyclerView.Adapter<SubjectsAdapter.MyViewHolder>() {
 

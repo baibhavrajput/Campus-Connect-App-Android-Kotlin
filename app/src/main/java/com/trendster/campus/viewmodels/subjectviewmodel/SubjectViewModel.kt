@@ -93,65 +93,6 @@ class SubjectViewModel : ViewModel() {
             }
     }
 
-    fun loadSubmissionStatus(classworkName: String) {
-        firestore.collection("Data").document(selectedUserBranch)
-            .collection(selectedUserSemester).document("Subjects")
-            .collection("list").document(selectedSubject)
-            .collection("classwork").document(classworkName)
-            .collection("submissions").document(selectedUserUID)
-            .addSnapshotListener { value, error ->
-                val docs = value?.exists()
-                _submitStatus.postValue(docs)
-            }
-    }
-
-    fun uploadSubmission(
-        context: Context,
-        pdfName: String,
-        pdfData: Uri?,
-        classworkName: String
-
-    ) {
-
-        val reference1 = storageReference
-            .child("pdf" + pdfName + "-" + System.currentTimeMillis() + ".pdf")
-        pdfData?.let { reference1.putFile(it) }?.addOnSuccessListener { task ->
-
-            val uriTask = task.storage.downloadUrl
-            while (!uriTask.isComplete);
-
-            val uri = uriTask.result
-            uploadData(
-                context,
-                pdfName,
-                uri.toString(),
-                classworkName
-
-            )
-        }?.addOnFailureListener {
-            showToast(context, it.message!!)
-        }
-    }
-
-    private fun uploadData(context: Context, pdfName: String, pdfUrl: String, classworkName: String) {
-
-        val data = HashMap<String, Any>()
-        data["pdfUrl"] = pdfUrl
-        data["pdfName"] = pdfName
-
-        firestore.collection("Data").document(selectedUserBranch)
-            .collection(selectedUserSemester).document("Subjects")
-            .collection("list").document(selectedSubject)
-            .collection("classwork").document(classworkName)
-            .collection("submissions").document(selectedUserUID)
-            .set(data).addOnSuccessListener {
-                showToast(context, "Submitted Successfully")
-            }
-            .addOnFailureListener {
-                showToast(context, it.message!!)
-            }
-    }
-
     private fun showToast(context: Context, message: String) {
         Toast.makeText(context, message, Toast.LENGTH_LONG).show()
     }

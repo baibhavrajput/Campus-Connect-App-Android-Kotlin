@@ -5,7 +5,7 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/scheduleFragment"
+            android:id="@+id/btnHome"
             android:icon="@drawable/ic_home_custom"
             android:checkable="false"
             android:title="@string/menu_home" />
