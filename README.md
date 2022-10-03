@@ -39,10 +39,12 @@
   
 ||||
 |:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
-| ![](media/login.jpeg) | ![](media/signup.jpeg) | ![](media/resetpassword.jpeg) |
-| ![](media/dashboard.jpeg) | ![](media/WeekView.jpeg) | ![](media/profile.jpeg) |
-| ![](media/subject.jpeg) | ![](media/subject.jpeg) | ![](media/classwork.png) |
-| ![](media/submissions.jpeg) | ![](media/notifications.jpeg) | ![](media/drawer.jpeg) |
+| ![](media/21.jpeg) | ![](media/22.jpeg) | ![](media/23.jpeg) | 
+| ![](media/23_2.jpeg) | ![](media/24.jpeg) | ![](media/25.jpeg) |
+| ![](media/26.jpeg) | ![](media/28.jpeg) | ![](media/29.jpeg) |
+| ![](media/30.jpeg) | ![](media/31.jpeg) | ![](media/32.jpeg) |
+| ![](media/33.jpeg) | ![](media/34.jpeg) | ![](media/38.jpeg) |
+
   
   
     
@@ -53,7 +55,8 @@ Faculty can manange students attendance and study materials according to the Sub
 
 ||||
 |:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
-| ![](media/facultyatt.jpeg) | ![](media/createClasswork.jpeg) |
+| ![](media/27.jpeg) | ![](media/35.jpeg) | ![](media/36.jpeg) |
+| ![](media/37.jpeg) |
 
 
 
